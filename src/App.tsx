@@ -45,9 +45,9 @@ export default function App() {
             <Route path="gyms" element={<GymsPage />} />
             <Route path="exercises" element={<ExercisesPage />} />
             <Route path="workout-plans" element={<WorkoutPlansPage />} />
-            <Route path="transactions" element={<TransactionsPage />} />
-            <Route path="challenges" element={<ChallengesPage />} />
-            <Route path="reports" element={<ReportsPage />} />
+            {/* <Route path="transactions" element={<TransactionsPage />} /> */}
+            {/* <Route path="challenges" element={<ChallengesPage />} /> */}
+            {/* <Route path="reports" element={<ReportsPage />} /> */}
           </Route>
 
           {/* Gym Manager Routes */}

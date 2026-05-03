@@ -19,9 +19,9 @@ const adminNavItems: NavItem[] = [
   { label: 'Gyms', icon: <Building2 size={20} />, path: '/admin/gyms' },
   { label: 'Exercises', icon: <ClipboardList size={20} />, path: '/admin/exercises' },
   { label: 'Workout Plans', icon: <CalendarDays size={20} />, path: '/admin/workout-plans' },
-  { label: 'Transactions', icon: <CreditCard size={20} />, path: '/admin/transactions' },
-  { label: 'Challenges', icon: <Trophy size={20} />, path: '/admin/challenges' },
-  { label: 'Reports', icon: <BarChart3 size={20} />, path: '/admin/reports' },
+ // { label: 'Transactions', icon: <CreditCard size={20} />, path: '/admin/transactions' },
+  //{ label: 'Challenges', icon: <Trophy size={20} />, path: '/admin/challenges' },
+ // { label: 'Reports', icon: <BarChart3 size={20} />, path: '/admin/reports' },
 ];
 
 const gymNavItems: NavItem[] = [
