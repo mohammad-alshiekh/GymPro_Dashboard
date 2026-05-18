@@ -2,7 +2,7 @@ import { useState, type ReactNode } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard, Users, UserCheck, Building2, CreditCard,
-  Trophy, BarChart3, LogOut, Menu, X, ScanLine, Star, Dumbbell, ClipboardList, CalendarDays
+  Trophy, BarChart3, LogOut, Menu, X, ScanLine, Star, Dumbbell, ClipboardList, CalendarDays, Layers, Wrench
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 
@@ -17,6 +17,8 @@ const adminNavItems: NavItem[] = [
   { label: 'Users', icon: <Users size={20} />, path: '/admin/users' },
   { label: 'Trainers', icon: <UserCheck size={20} />, path: '/admin/trainers' },
   { label: 'Gyms', icon: <Building2 size={20} />, path: '/admin/gyms' },
+  { label: 'Muscle Groups', icon: <Layers size={20} />, path: '/admin/muscle-groups' },
+  { label: 'Equipment', icon: <Wrench size={20} />, path: '/admin/equipment' },
   { label: 'Exercises', icon: <ClipboardList size={20} />, path: '/admin/exercises' },
   { label: 'Workout Plans', icon: <CalendarDays size={20} />, path: '/admin/workout-plans' },
  // { label: 'Transactions', icon: <CreditCard size={20} />, path: '/admin/transactions' },

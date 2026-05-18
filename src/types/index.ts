@@ -158,20 +158,67 @@ export interface AuthState {
   gymName?: string;
 }
 
+export interface MuscleGroup {
+  id: string;
+  nameEn: string;
+  nameAr: string;
+  descriptionEn?: string;
+  descriptionAr?: string;
+  isActive?: boolean;
+}
+
+export interface MuscleGroupPayload {
+  nameEn: string;
+  nameAr: string;
+  descriptionEn: string;
+  descriptionAr: string;
+  isActive: boolean;
+}
+
+export interface Equipment {
+  id: string;
+  nameEn: string;
+  nameAr: string;
+  descriptionEn?: string;
+  descriptionAr?: string;
+  isActive?: boolean;
+}
+
+export interface EquipmentPayload {
+  nameEn: string;
+  nameAr: string;
+  descriptionEn: string;
+  descriptionAr: string;
+  isActive: boolean;
+}
+
+export interface PaginatedResponse<T> {
+  items: T[];
+  totalCount: number;
+  pageNumber: number;
+  resultsPerPage: number;
+  totalPages: number;
+}
+
 export interface Exercise {
   id: string;
-  name: string;
-  category: 'strength' | 'cardio' | 'flexibility' | 'balance' | 'plyometrics' | 'calisthenics';
-  muscleGroups: string[];
-  equipment: string[];
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
-  description: string;
-  instructions: string[];
-  setsReps: string;
-  restPeriod: string;
-  caloriesPerHour: number;
-  status: 'active' | 'inactive';
-  createdAt: string;
+  nameEn: string;
+  nameAr: string;
+  descriptionEn: string;
+  descriptionAr: string;
+  instructionsEn: string[];
+  instructionsAr: string[];
+  level: number | null;
+  videoUrl: string;
+  imageUrl: string;
+  isActive: boolean;
+  force: number | null;
+  mechanic: number | null;
+  category: number | null;
+  equipmentEn: string;
+  equipmentAr: string;
+  primaryMuscleGroups: MuscleGroup[];
+  secondaryMuscleGroups: MuscleGroup[];
 }
 
 export interface WorkoutExercise {

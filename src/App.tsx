@@ -7,6 +7,8 @@ import UsersPage from '@/pages/admin/Users';
 import TrainersPage from '@/pages/admin/Trainers';
 import GymsPage from '@/pages/admin/Gyms';
 import ExercisesPage from '@/pages/admin/Exercises';
+import MuscleGroupsPage from '@/pages/admin/MuscleGroups';
+import EquipmentPage from '@/pages/admin/Equipment';
 import WorkoutPlansPage from '@/pages/admin/WorkoutPlans';
 import TransactionsPage from '@/pages/admin/Transactions';
 import ChallengesPage from '@/pages/admin/Challenges';
@@ -44,6 +46,8 @@ export default function App() {
             <Route path="trainers" element={<TrainersPage />} />
             <Route path="gyms" element={<GymsPage />} />
             <Route path="exercises" element={<ExercisesPage />} />
+            <Route path="muscle-groups" element={<MuscleGroupsPage />} />
+            <Route path="equipment" element={<EquipmentPage />} />
             <Route path="workout-plans" element={<WorkoutPlansPage />} />
             {/* <Route path="transactions" element={<TransactionsPage />} /> */}
             {/* <Route path="challenges" element={<ChallengesPage />} /> */}

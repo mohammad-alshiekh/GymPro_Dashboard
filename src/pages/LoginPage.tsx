@@ -12,19 +12,20 @@ export default function LoginPage() {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
     setLoading(true);
 
-    setTimeout(() => {
-      if (login(username || (role === 'admin' ? 'superadmin' : 'gymmanager'), password, role)) {
-        navigate(role === 'admin' ? '/admin/dashboard' : '/gym/dashboard');
-      } else {
-        setError('Invalid credentials.');
-      }
-      setLoading(false);
-    }, 400);
+    const email = username || (role === 'admin' ? 'superadmin@gmail.com' : 'gymmanager@fitzone.com');
+    const result = await login(email, password, role);
+    
+    if (result.success) {
+      navigate(role === 'admin' ? '/admin/dashboard' : '/gym/dashboard');
+    } else {
+      setError(result.message || 'Invalid credentials.');
+    }
+    setLoading(false);
   };
 
   return (

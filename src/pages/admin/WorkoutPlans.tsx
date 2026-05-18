@@ -563,9 +563,9 @@ export default function WorkoutPlansPage() {
             <div className="mt-2">
               <p className="text-xs text-gray-400 mb-1.5">Quick pick from library:</p>
               <div className="flex flex-wrap gap-1 max-h-24 overflow-y-auto">
-                {mockExercises.filter(e => e.name.toLowerCase().includes(exForm.name.toLowerCase()) || !exForm.name).slice(0, 8).map(e => (
-                  <button key={e.id} onClick={() => setExForm(f => ({ ...f, name: e.name }))} className="px-2 py-1 bg-gray-100 hover:bg-indigo-100 hover:text-indigo-700 text-gray-600 rounded-md text-xs transition-colors">
-                    {e.name}
+                {mockExercises.filter(e => e.nameEn.toLowerCase().includes(exForm.name.toLowerCase()) || !exForm.name).slice(0, 8).map(e => (
+                  <button key={e.id} onClick={() => setExForm(f => ({ ...f, name: e.nameEn }))} className="px-2 py-1 bg-gray-100 hover:bg-indigo-100 hover:text-indigo-700 text-gray-600 rounded-md text-xs transition-colors">
+                    {e.nameEn}
                   </button>
                 ))}
               </div>
