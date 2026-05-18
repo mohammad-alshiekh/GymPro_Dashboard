@@ -1,4 +1,9 @@
-/** Same-origin path; Vite proxies this to https://gymbro.runasp.net in dev/preview. */
+/**
+ * Default `/api` is same-origin:
+ * - local: Vite proxy → https://gymbro.runasp.net
+ * - Vercel: vercel.json rewrite → https://gymbro.runasp.net
+ * Override with VITE_API_BASE_URL only if you proxy elsewhere.
+ */
 export const API_BASE =
   import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') || '/api';
 
